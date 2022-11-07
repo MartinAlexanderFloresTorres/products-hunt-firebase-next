@@ -4,6 +4,7 @@ import useAuth from "../../hooks/useAuth";
 import useProductos from "../../hooks/useProductos";
 import uploadImage from "../../firebase/uploadImage";
 import Spinner from "../../components/loaders/Spinner";
+import BotonPrimario from "../../components/BotonPrimario";
 
 // Default State
 const defaultState = {
@@ -294,9 +295,7 @@ const Nuevo = () => {
 
       {errores.descripcion && <p className='error'>{errores.descripcion}</p>}
 
-      <button type='submit' className='btn btn-primario' disabled={loading}>
-        {loading ? "Creando..." : "Crear Producto"}
-      </button>
+      <BotonPrimario estado={loading}>Crear Producto</BotonPrimario>
     </form>
   );
 };

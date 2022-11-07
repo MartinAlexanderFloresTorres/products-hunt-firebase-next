@@ -37,7 +37,10 @@ const DetalleProducto = ({ producto, indice, ...props }) => {
 
   return (
     <article
-      className={`${style.detalleProducto} ${props?.id && style.search}`}
+      className={`${style.detalleProducto} ${
+        props?.id === "search" && style.search
+      }`}
+      {...props}
     >
       <Link href={`/productos/producto/${id}`}>
         <Image

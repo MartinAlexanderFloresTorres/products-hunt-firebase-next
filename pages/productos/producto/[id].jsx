@@ -107,7 +107,7 @@ const VisualizarProducto = () => {
             <div>
               <Image
                 src={producto.imagen}
-                width={500}
+                width={400}
                 height={400}
                 alt={producto.nombre}
                 priority
@@ -162,7 +162,7 @@ const VisualizarProducto = () => {
                     {usuario.uid === producto.creador.id && (
                       <button
                         type='button'
-                        className='btn btn-primario'
+                        className='btn btn-danger'
                         onClick={mostrarModal}
                       >
                         Eliminar
