@@ -417,6 +417,14 @@ textarea::placeholder {
   border: var(--border);
   border-radius: 5px;
 }
+.overlay-top{
+  padding-top: 50px;
+}
+.overlay-top .overlay-item{
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
 .overlay-close-x {
   position: absolute;
   top: -10px;

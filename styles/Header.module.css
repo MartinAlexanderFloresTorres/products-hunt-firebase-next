@@ -188,6 +188,17 @@
     column-gap: 5px;
     -webkit-column-gap: 5px;
   }
+  .loader{
+    max-width: 100%;
+  }
+  .loader_item{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  .loader_item:last-child{
+    display: none;
+  }
 }
 @media (max-width: 700px) {
   .bienvenida {

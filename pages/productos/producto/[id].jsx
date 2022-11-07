@@ -16,7 +16,7 @@ const VisualizarProducto = () => {
   // Estados
   const [producto, setProducto] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [Modal, modal, mostrarModal, ocultarModal] = useModal();
+  const [Modal, , mostrarModal, ocultarModal] = useModal();
 
   // useRouter
   const {

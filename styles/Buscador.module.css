@@ -1,4 +1,5 @@
-.buscador {
+.buscador,
+.buscadorNoVisible {
   background: var(--gris-1);
   border-radius: 5px;
   display: flex;
@@ -6,15 +7,40 @@
   justify-content: center;
   transition: var(--transicion-3s);
 }
-.buscador:focus-within{
+.buscador:focus-within {
   outline: 1px solid var(--gris-2);
 }
-.input{
+.input,
+.inputNoVisible {
   width: 100%;
   padding: 10px;
   font-size: 15px;
 }
-.button{
+.inputNoVisible {
+  color: var(--placeholder-color);
+  user-select: none;
+  cursor: pointer;
+}
+.buttonNoVisible {
+  cursor: pointer;
+}
+.button,
+.buttonNoVisible {
   padding: 10px 14px;
   color: var(--gris-3);
+}
+.resultados {
+  margin-top: 40px;
+}
+@media (max-width: 600px) {
+  .inputNoVisible{
+    display: none;
+  }
+  .buscadorNoVisible{
+    background: transparent;
+  }
+  .buttonNoVisible{
+    transform: translateX(-15px);
+    color: var(--black);
+  }
 }

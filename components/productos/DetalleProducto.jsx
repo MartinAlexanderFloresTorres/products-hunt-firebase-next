@@ -5,8 +5,8 @@ import useProductos from "../../hooks/useProductos";
 import useAuth from "../../hooks/useAuth";
 import Comentarios from "../comentarios/Comentarios";
 import formatearTiempo from "../../helpers/formatearTiempo";
-import style from "../../styles/DetalleProducto.module.css";
 import overflowBody from "../../helpers/overflowBody";
+import style from "../../styles/DetalleProducto.module.css";
 
 const DetalleProducto = ({ producto, indice, ...props }) => {
   // Estados
