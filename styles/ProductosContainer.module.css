@@ -1,0 +1,9 @@
+.home {
+  padding: 20px;
+}
+.titulo {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: var(--color-1);
+  font-family: var(--font-2);
+}

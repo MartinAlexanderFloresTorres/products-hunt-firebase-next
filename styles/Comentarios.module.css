@@ -1,0 +1,73 @@
+.comentarios {
+  padding: 20px 0;
+}
+.titulo {
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 20px;
+  font-family: var(--font-2);
+  display: flex;
+  align-items: center;
+  color: var(--color-1);
+  padding: 0 10px;
+}
+.titulo svg {
+  margin-right: 10px;
+  width: 26px;
+  height: 26px;
+  min-width: 26px;
+  min-height: 26px;
+}
+.vacio {
+  padding: 10px;
+  text-align: center;
+  color: var(--color-5);
+  font-size: 14px;
+}
+.vacio label {
+  margin: 10px auto;
+}
+
+.formulario {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50px 1fr auto;
+  align-items: center;
+  column-gap: 10px;
+  row-gap: 10px;
+  -webkit-column-gap: 10px;
+  padding: 6px 0;
+  border-top: var(--border);
+  border-bottom: var(--border);
+  margin-bottom: 20px;
+}
+.formulario img {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  min-height: 50px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+.formulario label {
+  display: block;
+  width: 100%;
+  height: fit-content;
+  max-height: fit-content;
+  line-height: normal;
+}
+.formulario input {
+  padding: 16px;
+  display: block;
+  line-height: normal;
+  width: 100%;
+  min-width: 100%;
+  max-width: fit-content;
+  min-height: 20px;
+  max-height: 100px;
+  resize: none;
+  border-radius: 5px;
+}
+.formulario input:focus {
+  background: var(--gris-1);
+}

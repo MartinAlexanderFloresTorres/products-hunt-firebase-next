@@ -1,0 +1,26 @@
+.navegacion {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  row-gap: 20px;
+  -webkit-column-gap: 20px;
+}
+.navegacion a {
+  text-align: center;
+  font-weight: 400;
+  font-size: 17px;
+  color: var(--color-3);
+  transition: var(--transition-3s);
+  border: var(--border);
+  padding: 8px 20px;
+  border-radius: 5px;
+}
+.navegacion a:hover {
+  color: var(--naranja);
+}
+@media (max-width: 1100px) {
+  .navegacion {
+    display: none;
+  }
+}

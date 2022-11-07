@@ -1,0 +1,20 @@
+.buscador {
+  background: var(--gris-1);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transicion-3s);
+}
+.buscador:focus-within{
+  outline: 1px solid var(--gris-2);
+}
+.input{
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+}
+.button{
+  padding: 10px 14px;
+  color: var(--gris-3);
+}
