@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Roboto+Condensed:wght@300;400;700&family=Roboto+Slab:wght@200;300;400;500;600;700;800;900&display=swap");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Roboto+Condensed:wght@300;400;700&family=Roboto+Slab:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
 * {
   margin: 0;
   padding: 0;
@@ -41,9 +41,9 @@
   --transition-3s: all 0.3s ease;
   --transition-5s: all 0.5s ease;
 
-  --font-1: "Roboto Slab", serif;
-  --font-2: "PT Sans", sans-serif;
-  --font-3: "Roboto Condensed", sans-serif;
+  --font-1: 'Roboto Slab', serif;
+  --font-2: 'PT Sans', sans-serif;
+  --font-3: 'Roboto Condensed', sans-serif;
 
   --hue: 223;
   --bg: hsl(var(--hue), 10%, 90%);
@@ -157,13 +157,24 @@ textarea::placeholder {
   color: #fff;
   z-index: 1;
 }
+.btn-blue {
+  background: #007cc3;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
 .btn-primario:disabled {
   background: var(--gris-2);
   color: var(--gris-3);
 }
+.btn-blue:disabled {
+  background: var(--gris-2);
+  color: var(--gris-3);
+}
 .btn-primario::after,
-.btn-danger::after {
-  content: "";
+.btn-danger::after,
+.btn-blue::after {
+  content: '';
   position: absolute;
   border-radius: 4px;
   z-index: -1;
@@ -180,12 +191,15 @@ textarea::placeholder {
 .btn-danger::after {
   background: linear-gradient(227deg, #f82068, #c51e00);
 }
-.btn-primario:disabled:hover::after {
+.btn-blue::after {
+  background: linear-gradient(227deg, #016caa, #0292e6);
+}
+.btn-primario:disabled:hover::after,
+.btn-blue:disabled:hover::after {
   opacity: 0;
 }
-.btn-primario:hover::after {
-  opacity: 1;
-}
+.btn-primario:hover::after,
+.btn-blue:hover::after,
 .btn-danger:hover::after {
   opacity: 1;
 }
@@ -225,6 +239,14 @@ textarea::placeholder {
   text-align: center;
   margin: 0 auto;
   margin-bottom: 2rem;
+}
+.formulario legend b {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 auto;
+  color: var(--naranja);
+  display: block;
 }
 .formulario legend svg {
   margin: 0 auto;
@@ -266,7 +288,7 @@ textarea::placeholder {
 .formulario textarea:focus {
   border-color: var(--naranja);
 }
-.formulario button[type="submit"] {
+.formulario button[type='submit'] {
   width: 100%;
 }
 .formulario-label-file {
@@ -344,7 +366,12 @@ textarea::placeholder {
   font-size: 14px;
   color: var(--azul);
 }
+.p-20 {
+  padding: 20px;
+}
 .vacio {
+  max-width: 600px;
+  margin: 0 auto;
   padding: 10px;
   text-align: center;
   border: var(--border);
@@ -417,10 +444,10 @@ textarea::placeholder {
   border: var(--border);
   border-radius: 5px;
 }
-.overlay-top{
+.overlay-top {
   padding-top: 50px;
 }
-.overlay-top .overlay-item{
+.overlay-top .overlay-item {
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
@@ -448,6 +475,55 @@ textarea::placeholder {
   align-items: center;
   justify-content: flex-end;
   column-gap: 14px;
+}
+.participantes {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.participantes__avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--naranja);
+  border: var(--border);
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.participantes h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-family: var(--font-2);
+  text-align: center;
+}
+.participantes ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  column-gap: 20px;
+  row-gap: 20px;
+  flex-wrap: wrap;
+}
+.participantes ul li {
+  border: var(--border);
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+.participantes ul li p {
+  margin-bottom: 10px;
+  word-wrap: break-word;
+}
+.participantes ul li button {
+  width: 100%;
+}
+.participantes a.btn {
+  margin: 30px auto;
 }
 @media (prefers-color-scheme: dark) {
   html {
@@ -510,7 +586,7 @@ textarea::placeholder {
   top: 0;
 }
 .sk-fading-circle .sk-circle:before {
-  content: "";
+  content: '';
   display: block;
   margin: 0 auto;
   width: 15%;

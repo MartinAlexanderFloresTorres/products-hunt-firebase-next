@@ -1,6 +1,7 @@
-const BotonPrimario = ({ estado, children }) => {
+const BotonPrimario = ({ estado, children, ...props }) => {
+  const { disabled = false } = props
   return (
-    <button type='submit' className='btn btn-primario' disabled={estado}>
+    <button type='submit' className='btn btn-primario' disabled={estado || disabled}>
       {estado ? (
         <svg
           className='pl'
@@ -41,7 +42,7 @@ const BotonPrimario = ({ estado, children }) => {
         <span>{children}</span>
       )}
     </button>
-  );
-};
+  )
+}
 
-export default BotonPrimario;
+export default BotonPrimario
